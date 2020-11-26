@@ -1,0 +1,444 @@
+//colors
+
+$blue: #00dbdc;
+$yellow: #f8ffb8;
+$textcolor: #004e5d;
+$imgtext: #909090;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 12px solid $blue;
+    min-height: 100vh;
+    max-width: 60vw;
+    background-color: $yellow;
+    margin: 0 auto;
+
+    .img_container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 60vw;
+        height: calc(50vw - 24px);
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            z-index: 1;
+            //átlátszósági effekt
+            -webkit-mask-image: -webkit-gradient(
+                linear,
+                left top,
+                left bottom,
+                from(rgba(0, 0, 0, 1)),
+                to(rgba(0, 0, 0, 0))
+            );
+            mask-image: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 1),
+                rgba(0, 0, 0, 0)
+            );
+        }
+        .btslogo {
+            position: absolute;
+            top: 23px;
+            left: 26px;
+            width: 70px;
+            height: 30px;
+            max-width: calc(100vw - 24px);
+            max-height: calc(100vw - 24px);
+            z-index: 2;
+
+            @media screen and (max-width: 1050px) {
+                width: 60px;
+                height: 30px;
+            }
+            @media screen and (max-width: 750px) {
+                width: 45px;
+                height: 25px;
+            }
+            @media screen and (max-width: 450px) {
+                width: 35px;
+                height: 20px;
+            }
+        }
+
+        .burger {
+            position: absolute;
+            top: 23px;
+            right: 26px;
+            width: 30px;
+            height: 30px;
+            max-width: calc(100vw - 24px);
+            max-height: calc(100vw - 24px);
+            z-index: 2;
+
+            @media screen and (max-width: 1050px) {
+                width: 30px;
+                height: 30px;
+            }
+            @media screen and (max-width: 750px) {
+                width: 25px;
+                height: 25px;
+            }
+            @media screen and (max-width: 450px) {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        .mainlogo {
+            width: 275px;
+            height: 275px;
+            max-width: calc(100vw - 24px);
+            max-height: calc(100vw - 24px);
+            z-index: 2;
+
+            @media screen and (max-width: 1050px) {
+                width: 185px;
+                height: 185px;
+            }
+            @media screen and (max-width: 750px) {
+                width: 115px;
+                height: 115px;
+            }
+            @media screen and (max-width: 450px) {
+                width: 65px;
+                height: 65px;
+            }
+        }
+
+        .siargao {
+            width: 285px;
+            height: 50px;
+            max-width: calc(100vw - 24px);
+            max-height: calc(100vw - 24px);
+            z-index: 2;
+            margin-top: 20px;
+
+            @media screen and (max-width: 1050px) {
+                width: 225px;
+                height: 40px;
+            }
+            @media screen and (max-width: 750px) {
+                width: 145px;
+                height: 30px;
+                margin-top: 10px;
+            }
+            @media screen and (max-width: 450px) {
+                width: 85px;
+                height: 20px;
+                margin-top: 5px;
+            }
+        }
+
+        .minilogos {
+            width: 275px;
+            height: 275px;
+            max-width: calc(100vw - 24px);
+            max-height: calc(100vw - 24px);
+            margin-top: 20px;
+            z-index: 2;
+
+            @media screen and (max-width: 1050px) {
+                width: 185px;
+                height: 185px;
+            }
+            @media screen and (max-width: 750px) {
+                width: 115px;
+                height: 115px;
+                margin-top: 10px;
+            }
+            @media screen and (max-width: 450px) {
+                width: 65px;
+                height: 65px;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+//lehet flexbe kellene a 2 elemet ??!!
+.maintext1 {
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    color: $blue;
+    width: 60%;
+    z-index: 2;
+    font-size: 20px;
+    margin: 0 auto;
+    //  margin-top: -80px;
+
+    @media screen and (max-width: 1050px) {
+        font-size: 15px;
+    }
+    @media screen and (max-width: 750px) {
+        font-size: 12px;
+    }
+    @media screen and (max-width: 450px) {
+        font-size: 8px;
+    }
+    svg {
+        float: left;
+        max-width: 140px;
+    }
+}
+
+.minitext1 {
+    width: 60%;
+    margin: 30px auto;
+    text-align: justify;
+    font-family: "Open Sans", sans-serif;
+    color: $textcolor;
+    font-size: 18px;
+
+    @media screen and (max-width: 1050px) {
+        font-size: 15px;
+    }
+    @media screen and (max-width: 750px) {
+        font-size: 12px;
+    }
+    @media screen and (max-width: 450px) {
+        font-size: 8px;
+    }
+
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        color: $blue;
+        float: left;
+        font-size: 60px;
+
+        @media screen and (max-width: 1050px) {
+            font-size: 45px;
+        }
+        @media screen and (max-width: 750px) {
+            font-size: 35px;
+        }
+        @media screen and (max-width: 450px) {
+            font-size: 25px;
+        }
+    }
+}
+
+.firstimg {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.firstimgtxt {
+    font-family: "Open Sans", sans-serif;
+    color: $imgtext;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 20px;
+
+    @media screen and (max-width: 1050px) {
+        font-size: 12px;
+    }
+    @media screen and (max-width: 750px) {
+        font-size: 10px;
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+    @media screen and (max-width: 450px) {
+        font-size: 8px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+}
+
+.maintext2 {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    @media screen and (max-width: 1050px) {
+        margin-top: 40px;
+    }
+    @media screen and (max-width: 750px) {
+        margin-top: 30px;
+    }
+    @media screen and (max-width: 450px) {
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 60px;
+        color: $blue;
+        margin-bottom: 5px;
+        letter-spacing: -4px;
+
+        @media screen and (max-width: 1050px) {
+            font-size: 45px;
+        }
+        @media screen and (max-width: 750px) {
+            font-size: 35px;
+            margin-bottom: 3px;
+        }
+        @media screen and (max-width: 450px) {
+            font-size: 25px;
+        }
+    }
+
+    p {
+        font-family: "Open Sans", sans-serif;
+        color: $textcolor;
+        margin-top: 30px;
+
+        @media screen and (max-width: 1050px) {
+            font-size: 15px;
+        }
+        @media screen and (max-width: 750px) {
+            font-size: 12px;
+        }
+        @media screen and (max-width: 450px) {
+            font-size: 8px;
+        }
+    }
+}
+
+.map {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.maintext3 {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 60px;
+        color: $blue;
+        margin-bottom: 5px;
+        letter-spacing: -4px;
+
+        @media screen and (max-width: 1050px) {
+            font-size: 45px;
+        }
+        @media screen and (max-width: 750px) {
+            font-size: 35px;
+            margin-bottom: 3px;
+        }
+        @media screen and (max-width: 450px) {
+            font-size: 25px;
+        }
+    }
+
+    p {
+        font-family: "Open Sans", sans-serif;
+        color: $textcolor;
+        margin-top: 30px;
+
+        @media screen and (max-width: 1050px) {
+            font-size: 15px;
+        }
+        @media screen and (max-width: 750px) {
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        @media screen and (max-width: 450px) {
+            font-size: 8px;
+            margin-top: 10px;
+        }
+    }
+}
+
+.maintext4 {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    @media screen and (max-width: 1050px) {
+        margin-top: 40px;
+    }
+    @media screen and (max-width: 750px) {
+        margin-top: 30px;
+    }
+    @media screen and (max-width: 450px) {
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 60px;
+        color: $blue;
+        margin-bottom: 5px;
+        letter-spacing: -4px;
+
+        @media screen and (max-width: 1050px) {
+            font-size: 45px;
+        }
+        @media screen and (max-width: 750px) {
+            font-size: 35px;
+            margin-bottom: 3px;
+        }
+        @media screen and (max-width: 450px) {
+            font-size: 25px;
+        }
+    }
+
+    p {
+        font-family: "Open Sans", sans-serif;
+        color: $textcolor;
+        margin-top: 30px;
+
+        @media screen and (max-width: 1050px) {
+            font-size: 15px;
+        }
+        @media screen and (max-width: 750px) {
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        @media screen and (max-width: 450px) {
+            font-size: 8px;
+            margin-top: 10px;
+        }
+    }
+}
+
+.secondimg {
+    margin-top: 100px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.secondimgtxt {
+    font-family: "Open Sans", sans-serif;
+    color: $imgtext;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 1050px) {
+        font-size: 12px;
+    }
+    @media screen and (max-width: 750px) {
+        font-size: 10px;
+        margin-left: 15px;
+        margin-top: 15px;
+        margin-bottom: 45px;
+    }
+    @media screen and (max-width: 450px) {
+        font-size: 8px;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 35px;
+    }
+}
